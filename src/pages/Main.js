@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
 
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 function Main() {
 
@@ -35,12 +35,26 @@ function Main() {
         return null;
     }
 
-    return <MapView initialRegion={currentRegion} style={styles.map}/>
+    return (
+        <MapView initialRegion={currentRegion} style={styles.map}>
+            <Marker coordinate={{ latitude: -25.40, longitude: -49.20}}>
+                <Image style={styles.avatar} source={{ uri: 'https://avatars0.githubusercontent.com/u/34045338?v=4'}}/>
+            </Marker>
+        </MapView>
+    );
 }
 
 const styles = StyleSheet.create({
     map: {
         flex: 1
+    },
+
+    avatar: {
+        width: 54,
+        height: 54,
+        borderRadius: 4,
+        borderWidth: 4,
+        borderColor: '#FFF'
     }
 });
 
