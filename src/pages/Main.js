@@ -43,7 +43,7 @@ function Main() {
                 <Callout>
                     <View style={styles.callout}>
                         <Text style={styles.devName}>Alexandre Pereira</Text>
-                        <Text style={styles.devBio}>Apaixonado por tecnologia e sempre em busca de novos conhecimentos</Text>
+                        <Text style={styles.devBio}>Desenvolvedor em várias tecnologias, mas sempre em busca de novos conhecimentos</Text>
                         <Text style={styles.devTechs}>Java, Angular, JavaScript, SQL</Text>
                     </View>
                 </Callout>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         height: 54,
         borderRadius: 4,
         borderWidth: 4,
-        borderColor: '#FFF'
+        borderColor: '#000'
     },
 
     callout: {
